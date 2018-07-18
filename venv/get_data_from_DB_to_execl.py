@@ -2,7 +2,7 @@ from mysql import connector
 
 def connet_DB():
     db_name = 'algorithm'
-    conn = connector.connect(user='test',password='xzy123',host='10.20.0.20',database=db_name,charset = 'utf8mb4')
+    conn = connector.connect(user='test',password='***',host='10.20.0.20',database=db_name,charset = 'utf8mb4')
     cursor = conn.cursor()
     return conn,cursor
 
