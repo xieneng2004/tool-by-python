@@ -7,7 +7,7 @@ import sys
 def connet_DB():
     # 定义数据库信息
     db_name = 'algorithm'
-    conn = connector.connect(user='test',password='xzy123',host='10.20.0.20',database=db_name,charset='utf8')
+    conn = connector.connect(user='test',password='***',host='10.20.0.20',database=db_name,charset='utf8')
     cursor = conn.cursor()
     return conn,cursor
 
@@ -31,7 +31,6 @@ def query_to_excel():
         else:
             query_sql = 'SELECT SUM(cnt_up),SUM(cnt_down) FROM `uits_cnt_log_t_2018-07-{}` WHERE dev_id = {};'.format(index, bus_id)
         # 字符串格式查询
-
         try:
             cursor.execute(query_sql)
             print(query_sql)
